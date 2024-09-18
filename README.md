@@ -14,6 +14,7 @@ Navega al directorio del proyecto:
 bash
 Copiar código
 Ejecuta Docker Compose:
+codigo de pops= 12345
 
 Asegúrate de tener Docker y Docker Compose instalados en tu máquina. Luego, ejecuta el siguiente comando:
 
@@ -43,9 +44,4 @@ Asegúrate de que todos los servicios de Docker estén funcionando correctamente
 markdown
 Copiar código
 
-### Instrucciones
 
-1. Copia y pega el contenido en un archivo llamado `README.md` en la raíz de tu proyecto.
-2. Modifica cualquier parte que necesites según tu estructura específica o requisitos del proyecto.
-
-¡Espero que esto te sea útil! Si necesitas más ayuda, no dudes en preguntar.
