@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydatabase
+    volumes:
+      - ./sqlinit.sql:/docker-entrypoint-initdb.d/sqlinit.sql
+    ports:
+      - "3307:3306"  # Exponer puerto 3306 del contenedor en el puerto 3307 del host
+    networks:
+      - app-network
+
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
+    environment:
+      - DB_HOST=mysql
+      - DB_USER=root
+      - DB_PASSWORD=rootpassword
+      - DB_NAME=mydatabase
+      - DB_PORT=3306  # Usar el puerto interno del contenedor
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
