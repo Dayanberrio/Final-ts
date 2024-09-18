@@ -13,7 +13,6 @@ Navega al directorio del proyecto:
 
 bash
 Copiar código
-cd Final-ts
 Ejecuta Docker Compose:
 
 Asegúrate de tener Docker y Docker Compose instalados en tu máquina. Luego, ejecuta el siguiente comando:
